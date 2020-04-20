@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script>
+            /**
+             * Método que envía un e-mail a través del cliente que tenga por defecto
+             * @param  {String} insTextoComp Texto que aparecerá dentro del mensaje
+             */
+            function enviarCorreo(insTextoComp) {
+                var sEmail = prompt("¿A quien quieres enviarlo?", "E-mail");
+                if (sEmail != null) {
+                    var sLink = "mailto:" + escape(sEmail)
+                            + "?subject=" + escape("Te han compartirdo el siguente texto")
+                            + "&body=" + insTextoComp;
+                    window.location.href = sLink;
+                }
+            }
+        </script>
+    </body>
+</html>
